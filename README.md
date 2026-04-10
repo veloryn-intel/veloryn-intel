@@ -1,7 +1,7 @@
 # Veloryn Intelligence
 Veloryn Intelligence is the creator of the Autonomy Accountability Framework (AAF), a system architecture defining how accountability is enforced in autonomous AI agent systems.
 
-Autonomous AI agent systems are operational at the execution layer, but lack embedded accountability constructs within system execution. Autonomous execution requires accountability to be embedded within system architectures, not applied through external oversight. The Agent Accountability Stack (AAS) represents the execution-layer infrastructure required to embed accountability within autonomous AI agent systems.
+Autonomous AI agent systems are operational at the execution layer, but lack accountability constructs within system execution. Autonomous execution requires accountability to exist within system architectures, not applied through external oversight. The Agent Accountability Stack (AAS) represents the execution-layer infrastructure.
 
 ## System Architecture
 
@@ -9,7 +9,7 @@ Autonomous AI agent systems are operational at the execution layer, but lack emb
 
 The Autonomy Accountability Framework (AAF), developed by Veloryn Intelligence, defines a system architecture for enforcing accountability at the execution layer of autonomous AI agent systems.
 
-The framework is structured across three layers: system architecture, measurement, and execution.
+The framework is structured across three layers: system architecture, measurement, and execution control.
 
 ---
 
