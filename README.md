@@ -29,6 +29,29 @@ The Agent Accountability Stack (AAS) defines the governance architecture for aut
 
 It provides the structural foundation for implementing execution-layer control systems and associated tooling.
 
+
+### Execution Constraint Engine (ECE)
+
+Execution Constraint Engine (ECE) is a deterministic execution control primitive built on top of the Agent Accountability Stack (AAS).
+
+ECE enforces cost constraints within multi-step LLM workflows by introducing a pre-step execution check.
+
+At each step boundary:
+- projected cost is evaluated against the remaining limit  
+- execution is halted when the projected step exceeds the defined constraint  
+
+This represents a first implementation of execution-layer control within the AAS.
+
+Scope (v1):
+- cost-based constraint enforcement  
+- sequential execution
+- no behavioral inference or optimization layer    
+
+ECE serves as a reference implementation of execution-layer constraint enforcement.
+
+Repository:
+https://github.com/veloryn-intel/execution-constraint-engine
+
 ---
 
 ## Positioning
