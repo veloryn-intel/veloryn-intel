@@ -29,6 +29,16 @@ The Agent Accountability Stack (AAS) defines the governance architecture for aut
 
 It provides the structural foundation for implementing execution-layer control systems and associated tooling.
 
+---
+
+### Agent Accountability Stack (AAS)  
+
+![Agent Accountability Stack](aas.png)
+
+ECE (v1) is the first enforcement primitive in the Agent Accountability Stack (AAS), part of the Autonomy Accountability Framework (AAF) developed by Veloryn Intelligence.
+
+---
+
 
 ### Execution Constraint Engine (ECE)
 
@@ -40,7 +50,6 @@ At each step boundary:
 - projected cost is evaluated against the remaining limit  
 - execution is halted when the projected step exceeds the defined constraint  
 
-This represents a first implementation of execution-layer control within the AAS.
 
 Scope (v1):
 - cost-based constraint enforcement  
