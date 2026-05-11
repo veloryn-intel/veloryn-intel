@@ -1,13 +1,12 @@
 # Veloryn Intelligence
 
-Execution control for multi-step AI systems.
+Execution control for multi-step AI systems.  
 Veloryn Intelligence builds execution-layer control infrastructure for autonomous AI systems.
 
 Current systems execute.
 They do not evaluate whether execution should continue.
 
-Veloryn Intelligence is not a collection of tools.
-It is a control plane for execution in autonomous AI systems.
+Veloryn Intelligence is an execution-layer control plane for autonomous AI systems.
 
 ---
 
@@ -18,7 +17,7 @@ Veloryn Intelligence builds a control plane for execution in autonomous AI syste
 Execution is treated as a stateful process, not a sequence of independent steps.
 
 The system evaluates:
-- whether execution is progressing
+- whether execution remains structurally productive
 - whether marginal contribution justifies continuation
 - whether execution should terminate
 
@@ -26,11 +25,11 @@ The system evaluates:
 
 ## What This System Does
 
-Veloryn Intelligence introduces runtime control at the execution layer.
+Veloryn Intelligence introduces execution-layer control primitives for autonomous systems.
 
-- evaluates whether execution is still producing marginal contribution relative to cost and prior state
-- constrains execution based on observed state
-- prevents continuation under diminishing or non-productive conditions
+- evaluates whether execution remains structurally productive relative to prior state and execution cost
+- analyzes execution trajectories for redundancy, stagnation, and collapse
+- applies execution constraints under non-productive or invalid continuation conditions
 
 
 ---
@@ -45,16 +44,25 @@ In practice:
 - later steps expand, repeat, or rephrase  
 - cost continues to accumulate regardless  
 
-Execution can remain locally valid at each step while producing globally diminishing value.
+Execution can remain locally valid while globally stagnating.
 
-There is currently no runtime mechanism to determine whether execution should continue.
-
+Most current systems do not evaluate whether continued execution remains justified.
 
 ### Observed in practice:
 
 - agent loops continue after convergence  
 - retries repeat prior reasoning  
-- outputs expand without improving  
+- outputs expand without improving
+
+---
+
+## Execution-Layer Architecture
+
+Execution-layer control architecture for deterministic analysis, constraint enforcement, and runtime policy control in autonomous AI systems.
+
+![Execution-Layer Architecture](xray-ece-architecture.png)
+
+X-Ray analyzes execution behavior. ECE enforces execution constraints. Together they form the execution-layer control surface for autonomous systems.
 
 ---
 
@@ -71,21 +79,7 @@ They answer one question:
 
 ---
 
-## Execution Layer  
-
-The Agent Accountability Stack (AAS) defines the execution-layer control architecture.
-
-It provides the structure for:
-
-- step-level evaluation
-- constraint enforcement
-- execution state tracking
-
-![Agent Accountability Stack](aas.png)
-
----
-
-## Current Primitives (Early Stage)
+## Current Primitives 
 
 ### Execution Constraint Engine (ECE)
 
@@ -110,9 +104,9 @@ The following primitives expose and enforce execution behavior within this contr
 
 Deterministic instrumentation for execution behavior at step boundaries.
 
-- identifies where execution stops improving  
-- measures redundancy and marginal contribution  
-- reconstructs execution trajectory  
+- identifies execution stagnation boundaries  
+- measures redundancy and marginal contribution 
+- reconstructs execution trajectories  
 
 Example output:
 
@@ -136,12 +130,29 @@ Step 5 → Declining
 → X-Ray reveals when execution becomes unproductive  
 → it does not enforce stopping  
 
+Execution enforcement belongs to the constraint layer, not the analysis layer.
+
 ![Execution Analysis](crewai-example.png)
 
 Repository:
 https://github.com/veloryn-intel/veloryn-xray
 
 ---
+
+## Execution Layer  
+
+The following architecture formalizes these primitives into an execution-layer control stack.
+
+It provides the structure for:
+
+- step-level evaluation
+- constraint enforcement
+- execution state tracking
+
+![Agent Accountability Stack](aas.png)
+
+---
+
 ## Design Constraints
 
 - must operate inside existing execution loops (no orchestration takeover)
