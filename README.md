@@ -1,25 +1,25 @@
 # Veloryn Intelligence
 
 Execution control for multi-step AI systems.  
+
 Veloryn Intelligence builds execution-layer control infrastructure for autonomous AI systems.
 
-Current systems execute.
-They do not evaluate whether execution should continue.
-
-Veloryn Intelligence is an execution-layer control plane for autonomous AI systems.
+Existing runtime systems primarily expose execution telemetry rather than continuation-state evolution.
 
 ---
 
-## Execution Control Plane
+## Execution-Layer Infrastructure
 
-Veloryn Intelligence builds a control plane for execution in autonomous AI systems.
+Veloryn Intelligence develops deterministic execution-state analysis and runtime control infrastructure for autonomous AI systems.
 
-Execution is treated as a stateful process, not a sequence of independent steps.
+The system treats execution as a stateful trajectory rather than a sequence of isolated inference steps.
 
-The system evaluates:
-- whether execution remains structurally productive
-- whether marginal contribution justifies continuation
-- whether execution should terminate
+Focus areas include:
+- continuation behavior
+- trajectory persistence
+- execution-state evolution
+- redundancy accumulation
+- runtime constraint enforcement
 
 ---
 
@@ -27,8 +27,8 @@ The system evaluates:
 
 Veloryn Intelligence introduces execution-layer control primitives for autonomous systems.
 
-- evaluates whether execution remains structurally productive relative to prior state and execution cost
-- analyzes execution trajectories for redundancy, stagnation, and collapse
+- analyzes continuation-state evolution across multi-step execution
+- detects redundancy accumulation, stagnation, and trajectory drift
 - applies execution constraints under non-productive or invalid continuation conditions
 
 
@@ -45,6 +45,8 @@ In practice:
 - cost continues to accumulate regardless  
 
 Execution can remain locally valid while globally stagnating.
+
+Continued execution is not sufficient evidence of continued trajectory persistence.
 
 Most current systems do not evaluate whether continued execution remains justified.
 
@@ -65,17 +67,25 @@ Execution-layer control architecture for deterministic analysis, constraint enfo
 X-Ray analyzes execution behavior. ECE enforces execution constraints. Together they form the execution-layer control surface for autonomous systems.
 
 ---
+## Trajectory-Aware Runtime Analysis
 
+Recent execution-state research demonstrated that multi-step AI workflows can remain locally coherent while progressively weakening in long-range trajectory persistence.
 
-## Execution Primitives
+This creates execution regimes where:
+- adjacent steps appear valid
+- workflows remain operational
+- retries continue succeeding
+- execution appears healthy
+
+while underlying trajectory persistence progressively weakens across continuation depth.
+
+Veloryn Intelligence treats continuation as a runtime-state problem rather than solely an inference-efficiency problem.
+
+## Execution-State Primitives
 
 Veloryn Intelligence builds execution-layer control primitives for AI systems.
 
-These operate inside execution, not around it.
-
-They answer one question:
-
-> should this system continue executing?
+These primitives operate directly on execution-state evolution across multi-step workflows.
 
 ---
 
@@ -102,11 +112,22 @@ The following primitives expose and enforce execution behavior within this contr
 
 ### X-Ray (Execution Analysis)
 
-Deterministic instrumentation for execution behavior at step boundaries.
+Deterministic execution-state analysis for multi-step autonomous workflows.
 
-- identifies execution stagnation boundaries  
-- measures redundancy and marginal contribution 
-- reconstructs execution trajectories  
+- identifies execution stagnation boundaries
+- measures redundancy and marginal contribution
+- reconstructs execution trajectories
+- provides deterministic replay analysis
+
+Recent trajectory-analysis research extending the X-Ray execution model introduced:
+- trajectory drift diagnostics
+- local-versus-global persistence analysis
+- transition stability analysis
+- branch divergence and convergence behavior
+
+These primitives extend X-Ray toward trajectory-aware execution analysis for long-running AI workflows.
+
+X-Ray analyzes execution behavior through replayable lexical and structural signals rather than semantic correctness or reasoning quality.
 
 Example output:
 
@@ -205,7 +226,7 @@ This requires:
 - real multi-step execution traces 
 - deterministic measurement layer 
 - evaluated across controlled and adversarial scenarios
-- designed for runtime integration, not offline analysis
+- designed for runtime execution systems rather than offline benchmarking
 
 Example cases:
 
@@ -242,11 +263,18 @@ It controls whether execution should continue.
 
 ## Research
 
-Efficiency Collapse in Multi-Step LLM Execution  
+### Trajectory Drift and Execution Validity in Multi-Step LLM Workflows
+
+Deterministic analysis of execution-state evolution across continuation, drift, branching, and convergence trajectories in multi-step LLM workflows.
+
+- DOI: https://doi.org/10.5281/zenodo.20290421
+- Repo: https://github.com/veloryn-intel/trajectory-drift-execution-validity
+
+### Efficiency Collapse in Multi-Step LLM Execution  
 - Zenodo: https://doi.org/10.5281/zenodo.19928793  
 - Repo: https://github.com/veloryn-intel/efficiency-collapse-llm-execution
 
-Governance Maturity in Autonomous AI Agent Systems: An Empirical Evaluation Using the Autonomy Accountability Framework (AAF)  
+### Governance Maturity in Autonomous AI Agent Systems: An Empirical Evaluation Using the Autonomy Accountability Framework (AAF)  
 - SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6505200  
 - Repo: https://github.com/veloryn-intel/governance-maturity-ai-agent-systems
 ---
@@ -256,7 +284,7 @@ The following architecture formalizes these primitives into a system-level frame
 
 ## Autonomy Accountability Framework (AAF)
 
-AAF defines accountability at the execution layer of autonomous systems.
+AAF provides the broader governance and accountability framework surrounding execution-layer runtime control systems.
 
 It separates:
 
@@ -271,7 +299,7 @@ It separates:
 
 - ECE v1 → implemented  
 - X-Ray → implemented  
-- execution-aware control primitives under active development (state-aware, trajectory-aware)
+- trajectory-aware continuation control and execution-enforcement primitives currently under development
 
 ---
 
@@ -282,6 +310,7 @@ It separates:
 - Research Report (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6505200  
 - Research Report (Zenodo):  https://doi.org/10.5281/zenodo.19928793
 - Research Report (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687664
+- Research Report (Zenodo): https://doi.org/10.5281/zenodo.20290421 
 - Articles: https://medium.com/@velorynintel
 
 ## Contact
