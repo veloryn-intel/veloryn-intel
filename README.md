@@ -1,25 +1,40 @@
 # Veloryn Intelligence
 
-Execution control for multi-step AI systems.  
+**Execution-layer infrastructure for autonomous AI systems.**
 
-Veloryn Intelligence builds execution-layer control infrastructure for autonomous AI systems.
+Veloryn Intelligence builds execution-layer infrastructure for autonomous AI systems through **Execution Intelligence** and **Runtime Control**.
 
-Existing runtime systems primarily expose execution telemetry rather than continuation-state evolution.
+Long-running autonomous systems increasingly develop through retrieval, verification, delegation, revision and evidence accumulation rather than isolated inference calls.
+
+Existing runtime infrastructure primarily reconstructs specifications, runtime events, coordination and historical outcomes.
+
+Veloryn Intelligence explores **Operational Representations of Autonomous Execution** as a complementary runtime perspective. **X-Ray** reconstructs representative runtime structures from observed execution progression, enabling **Execution Intelligence** for characterization, diagnostics, similarity analysis, progression understanding and runtime intervention.
+
+**Runtime Control is the first application built on this execution layer.**
+
+<!-- Canonical Architecture Diagram -->
+
+![Execution Intelligence Architecture](execution-intelligence-architecture.png)
+
+**Execution Intelligence** provides characterization, similarity, progression analysis, diagnostics and qualification capabilities consumed by runtime systems.
 
 ---
 
 ## Execution-Layer Infrastructure
 
-Veloryn Intelligence develops deterministic execution-state analysis and runtime control infrastructure for autonomous AI systems.
+Veloryn Intelligence develops execution intelligence and runtime control infrastructure for autonomous AI systems.
 
-The system treats execution as a stateful trajectory rather than a sequence of isolated inference steps.
+The system treats execution as an operational object rather than a sequence of isolated runtime events.
 
 Focus areas include:
-- continuation behavior
-- trajectory persistence
-- execution-state evolution
-- redundancy accumulation
-- runtime constraint enforcement
+
+* operational representations
+* execution intelligence
+* execution characterization
+* representative runtime structures
+* execution-state evolution
+* runtime qualification
+* runtime intervention
 
 ---
 
@@ -297,21 +312,45 @@ It separates:
 
 ## Status
 
-- ECE v1 → implemented  
-- X-Ray → implemented  
-- trajectory-aware continuation control and execution-enforcement primitives currently under development
+- ECE v1 → implemented
+- X-Ray v1 → live
+- runtime qualification and execution-enforcement primitives → under development
 
 ---
 
 ## Resources
 
-- Framework Paper (Zenodo): https://doi.org/10.5281/zenodo.19018953  
-- Framework Paper (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6391521  
-- Research Report (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6505200  
-- Research Report (Zenodo):  https://doi.org/10.5281/zenodo.19928793
-- Research Report (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687664
-- Research Report (Zenodo): https://doi.org/10.5281/zenodo.20290421 
-- Articles: https://medium.com/@velorynintel
+### Perspectives
+
+Operational observations on autonomous execution, runtime systems and execution-layer control.
+
+https://www.velorynintel.com/perspectives.html
+
+### Institutional Essays
+
+Operational representations and execution intelligence for long-running autonomous systems.
+
+https://www.velorynintel.com/perspectives/operational-representations-of-autonomous-execution.html
+
+### Runtime Evidence
+
+Documented execution behavior from runtime validation and investigation.
+
+https://www.velorynintel.com/runtime-evidence.html
+
+### Other Publications
+
+* Framework Paper (Zenodo): https://doi.org/10.5281/zenodo.19018953
+* Framework Paper (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6391521
+* Research Report (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6505200
+* Research Report (Zenodo): https://doi.org/10.5281/zenodo.19928793
+* Research Report (SSRN): https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687664
+* Research Report (Zenodo): https://doi.org/10.5281/zenodo.20290421
+
+### Articles
+
+https://medium.com/@velorynintel
+
 
 ## Contact
 
