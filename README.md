@@ -354,4 +354,12 @@ https://medium.com/@velorynintel
 
 ## Contact
 
-contact@velorynintel.com
+contact@velorynintel.com  
+
+## Website
+
+https://www.velorynintel.com
+
+## Perspectives, Runtime Evidence & Observations
+
+https://www.velorynintel.com/perspectives/
