@@ -362,4 +362,4 @@ https://www.velorynintel.com
 
 ## Perspectives, Runtime Evidence & Observations
 
-https://www.velorynintel.com/perspectives/
+https://www.velorynintel.com/perspectives.html
